@@ -9,7 +9,10 @@
     ></v-progress-linear>
     <v-card width="100%" cols="4" class="d-flex flex-wrap">
       <v-col
-        :cols="4"
+        :cols="12"
+        :sm="4"
+        :md="4"
+        :lg="4"
         :loading="loading"
         :key="categoria.tituloCategoria"
         v-for="categoria in categorias"
@@ -128,10 +131,8 @@ export default {
         .then(
           (e) => console.log(e),
           (err) => console.log(err)
-        ).finally(
-          this.loading = false,
-          alert("Voto salvo!")
-        );
+        )
+        .finally((this.loading = false), alert("Voto salvo!"));
     },
     onChange(itemValue, cat, pts) {
       console.log(itemValue, cat, pts);
