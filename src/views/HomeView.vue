@@ -113,7 +113,6 @@ export default {
   methods: {
     button() {
       this.loading = true;
-      alert("botão ativado!");
       this.$http
         .post(
           "insertVoto.php",
@@ -129,8 +128,10 @@ export default {
         .then(
           (e) => console.log(e),
           (err) => console.log(err)
+        ).finally(
+          this.loading = false,
+          alert("Voto salvo!")
         );
-      this.loading = false;
     },
     onChange(itemValue, cat, pts) {
       console.log(itemValue, cat, pts);
