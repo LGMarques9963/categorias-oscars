@@ -129,10 +129,11 @@ export default {
           }
         )
         .then(
-          (e) => console.log(e),
-          (err) => console.log(err)
+          (e) => (alert("Voto salvo!")),
+          (err) => (alert(err))
         )
-        .finally((this.loading = false), alert("Voto salvo!"));
+        .finally((this.loading = false));
+        this.moradores = [];
     },
     onChange(itemValue, cat, pts) {
       console.log(itemValue, cat, pts);
