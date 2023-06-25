@@ -13,7 +13,7 @@
 
         <v-img
           alt="Vuetify Name"
-          class="shrink mr-2 hidden-sm-and-down"
+          class="mr-2"
           contain
           min-width="100"
           :src="require('.//assets/Logo-Oscars.svg')"
