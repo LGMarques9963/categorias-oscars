@@ -24,7 +24,6 @@
             <v-autocomplete
               :items="moradores"
               :loading="loading"
-              :search-input.sync="search"
               @blur="onBlur"
               :id="categoria.tituloCategoria + ',3'"
               color="black"
@@ -44,7 +43,6 @@
             <v-autocomplete
               :items="moradores"
               :loading="loading"
-              :search-input.sync="search"
               @blur="onBlur"
               :id="categoria.tituloCategoria + ',2'"
               color="black"
@@ -63,7 +61,6 @@
             <v-autocomplete
               :items="moradores"
               :loading="loading"
-              :search-input.sync="search"
               @blur="onBlur"
               :id="categoria.tituloCategoria + ',1'"
               color="black"
@@ -116,6 +113,7 @@ export default {
   methods: {
     button() {
       this.loading = true;
+      console.log(this.votos);
       this.$http
         .post(
           "insertVoto.php",
@@ -140,8 +138,10 @@ export default {
       console.log(this);
     },
     onBlur(value) {
-      let id = value.originalTarget.id;
-      const voto = value.originalTarget.value;
+      console.log(value.target);
+      console.log(value);
+      let id = value.target.id;
+      const voto = value.target.value;
       const idArray = id.split(",");
       const cat = idArray[0];
       const posicao = idArray[1];
