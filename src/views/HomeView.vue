@@ -32,6 +32,7 @@
               return-object
               label="Primeiro Colocado"
               placeholder="Primeiro Colocado"
+              suffix="3 pontos"
               class="d-flex align-center mt-7"
               hide-no-data
               rounded
@@ -50,6 +51,7 @@
               item-value="Nome"
               label="Segundo Colocado"
               placeholder="Segundo Colocado"
+              suffix="2 pontos"
               class="d-flex align-center mt-7"
               hide-no-data
               rounded
@@ -67,6 +69,7 @@
               item-text="Nome"
               item-value="Nome"
               label="Terceiro Colocado"
+              suffix="1 ponto"
               placeholder="Terceiro Colocado"
               class="d-flex align-center mt-7"
               hide-no-data
